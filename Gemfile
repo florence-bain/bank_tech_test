@@ -7,5 +7,6 @@ git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
 # gem "rails"
 
 gem 'rspec'
-gem 'simplecov'
 gem 'simplecov-console'
+gem 'simplecov', require: false, group: :test
+gem 'rubocop', '~> 1.22', require: false

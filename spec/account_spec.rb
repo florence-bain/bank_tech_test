@@ -11,6 +11,9 @@ describe Account do
     it 'allows funds to be added to the account' do
       expect(account.deposit(20)).to eq(20)
     end 
+    it 'allows other funds to be deposisted' do
+      expect(account.deposit(3000)).to eq(3000)
+    end 
   end 
 
 end

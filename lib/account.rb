@@ -1,10 +1,14 @@
 class Account
 
+  def initialize
+    @balance = 0
+  end 
+
   def new_balance
-    0
+    @balance
   end
   
   def deposit(funds)
-    20
+    @balance += funds
   end
 end 
