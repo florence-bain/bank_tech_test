@@ -1,3 +1,5 @@
+require_relative 'account'
+
 class Statement
 
   def initialize
@@ -7,4 +9,10 @@ class Statement
   def time
     @time = Time.now.strftime('%d/%m/%Y')
   end
+
+  def display(transaction)
+    puts 'time        || credit || debit || balance'
+    transaction.join(' || ')
+  end 
+
 end 
