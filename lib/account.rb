@@ -3,7 +3,7 @@ require_relative 'transactions'
 
 class Account
 
-  attr_reader :balance, :credit, :debit, :transaction
+  attr_reader :balance, :credit, :debit, :transactions
 
   def initialize(transactions)
     @transactions = transactions
