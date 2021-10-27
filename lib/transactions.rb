@@ -20,5 +20,4 @@ class Transactions
       @balance -= funds
       return format('%.2f', @balance)
   end
-
 end 

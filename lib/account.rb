@@ -3,10 +3,11 @@ require_relative 'transactions'
 
 class Account
 
-  attr_reader :balance, :credit, :debit, :transactions
+  attr_reader :transactions, :statement
 
-  def initialize(transactions)
+  def initialize(transactions, statement)
     @transactions = transactions
+    @statement = statement
   end 
   
   def deposit(funds)
@@ -16,5 +17,9 @@ class Account
   def withdraw(funds)
     transactions.withdraw(funds)
   end
+
+  def print_statement
+    statement.format(transactions.transaction)
+  end 
 
 end 
