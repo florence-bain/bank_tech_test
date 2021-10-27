@@ -15,6 +15,6 @@ class Account
   end
 
   def withdraw(funds)
-    @balance -= funds
+      @balance -= funds
   end
 end 

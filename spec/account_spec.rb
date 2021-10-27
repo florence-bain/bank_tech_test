@@ -18,7 +18,7 @@ describe Account do
 
       it 'allows other funds to be deposited' do
         expect(account.deposit(3000)).to eq(3000)
-       end 
+      end 
     end
 
     describe '#withdraw' do
