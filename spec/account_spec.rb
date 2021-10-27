@@ -34,10 +34,10 @@ describe Account do
   describe '#print_statement' do
     before do
       allow(statement).to receive(:format)
-      allow(transactions).to receive(:transaction)
+      allow(transactions).to receive(:transactions)
     end
 
-    it 'print should receive the pretty print method' do
+    it 'print should receive the print_statement method' do
       account.print_statement
       expect(statement).to have_received(:format)
     end

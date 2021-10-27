@@ -19,7 +19,7 @@ class Account
   end
 
   def print_statement
-    statement.format(transactions.transaction)
+    statement.format(transactions.transactions)
   end 
 
 end 

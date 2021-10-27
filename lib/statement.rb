@@ -12,11 +12,11 @@ class Statement
 
   def format(transactions)
     format
-    transactions.reverse_each do |transaction|
-      print " #{transaction[:date]} ||",
-            " #{transaction[:credit]}    ||",
-            " #{transaction[:debit]}   ||",
-            " #{transaction[:balance]}\n"
+    transactions.reverse_each do |transactions|
+      print " #{transactions[:date]} ||",
+            " #{transactions[:credit]}    ||",
+            " #{transactions[:debit]}   ||",
+            " #{transactions[:balance]}\n"
     end
   end
 

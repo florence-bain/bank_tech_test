@@ -1,12 +1,12 @@
 class Transactions
 
-  attr_reader :balance, :credit, :debit, :transaction
+  attr_reader :balance, :credit, :debit, :transactions
 
-  def initialize(balance = 0, credit = 0, debit = 0, transaction = [])
+  def initialize(balance = 0, credit = 0, debit = 0, transactions = [])
     @balance = balance
     @credit = credit
     @debit = debit
-    @transaction = transaction
+    @transactions = transactions
   end 
   
   def deposit(funds)
