@@ -63,6 +63,7 @@ my_bank.withdraw(400)
 my_bank.deposit(300)
 my_bank.print_statement
 ```
+<img width="569" alt="Screenshot 2021-10-28 at 13 18 01" src="https://user-images.githubusercontent.com/78934464/139254671-9cfa90bc-7852-4f69-be4b-be99c2b08006.png">
 
 ### Running the tests
 
@@ -109,11 +110,10 @@ I'd like to be able to view the date of transactions.
 
 From this I am able to identify the need for three objects (account, transactions, statement) and three methods (account.deposit, account.withdraw, account.statement).
 
+```
 Date || Credit || Debit || Balance
 28/10/21 || 300.00 || ------ || 400.00
 28/10/21 || ------- || 400.00 || 100.00
 28/10/21 || 500.00 || ------ || 500.00
-
-```
 
 ```
