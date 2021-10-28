@@ -1,5 +1,4 @@
 class Transactions
-
   attr_reader :balance, :credit, :debit, :transactions
 
   def initialize(balance = 0, credit = 0, debit = 0, transactions = [])
@@ -7,21 +6,21 @@ class Transactions
     @credit = credit
     @debit = debit
     @transactions = transactions
-  end 
-  
+  end
+
   def deposit(funds)
     balance_plus(funds)
     record_deposit(funds)
   end
 
   def withdraw(funds)
-    raise "Insufficient funds" if @balance < funds
-    
-      balance_subtract(funds)
-      record_withdraw(funds)
-  end 
+    raise 'Insufficient funds' if @balance < funds
 
-private
+    balance_subtract(funds)
+    record_withdraw(funds)
+  end
+
+  private
 
   def record_deposit(funds)
     transaction = {
@@ -51,5 +50,4 @@ private
   def balance_subtract(funds)
     @balance -= funds
   end
-  
-end 
+end

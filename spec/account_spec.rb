@@ -1,17 +1,16 @@
 require './lib/account'
 require './lib/transactions'
 
-
 describe Account do
   subject(:account) { Account.new(transactions, statement) }
-  let(:transactions) { double("transactions")}
-  let(:statement) { double("statement")}
+  let(:transactions) { double('transactions') }
+  let(:statement) { double('statement') }
 
-  describe '#transactions' do 
+  describe '#transactions' do
     it 'should create a instance of transactions' do
       expect(account.transactions).to eq transactions
-    end 
-  end 
+    end
+  end
 
   describe '#deposit' do
     it 'transactions can use deposit method' do
@@ -41,6 +40,5 @@ describe Account do
       account.print_statement
       expect(statement).to have_received(:format)
     end
-  end 
+  end
 end
-

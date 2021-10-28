@@ -62,16 +62,58 @@ my_bank.deposit(500)
 my_bank.withdraw(400)
 my_bank.deposit(300)
 my_bank.print_statement
-
-### Running the tests
 ```
 
+### Running the tests
+
+```
 rspec
 
 ```
 
- Date     || Credit  || Debit    || Balance
- 28/10/21 || 300.00  || ------   || 400.00
- 28/10/21 || ------- || 400.00   || 100.00
- 28/10/21 || 500.00  || ------   || 500.00
+### Approach
+
+Firstly, reading the requirements for the tech test I have noted that the user should be able to interact with the code through a REPL, in this case IRB. Using the requirements guides me to what objects I would need and therefore able to create feature tests. The requirements suggest having a bank account that can deposit, withdraw and print a statement. With this information I can write user stories.
+
+User stories:
+
+```
+As a user,
+So that I can keep track of my money,
+I'd like to be able to create a new bank account with a default balance of zero.
+```
+
+```
+As a user,
+So that I can store money safely,
+I'd like to be able to deposit my money into my bank account.
+```
+
+```
+As a user,
+So that I can retrieve my stored money,
+I'd like to be able to withdraw my money out of my bank account.
+```
+
+```
+As a user,
+So that I can remember my account history,
+I'd like to be able to print a bank statement.
+```
+
+```
+As a user,
+So that I can recall the timing of my transactions,
+I'd like to be able to view the date of transactions.
+```
+
+From this I am able to identify the need for three objects (account, transactions, statement) and three methods (account.deposit, account.withdraw, account.statement).
+
+Date || Credit || Debit || Balance
+28/10/21 || 300.00 || ------ || 400.00
+28/10/21 || ------- || 400.00 || 100.00
+28/10/21 || 500.00 || ------ || 500.00
+
+```
+
 ```

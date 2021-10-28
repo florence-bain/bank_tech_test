@@ -1,7 +1,6 @@
 require_relative 'account'
 
 class Statement
-
   def initialize
     @time = Time.now
   end
@@ -20,5 +19,4 @@ class Statement
             " #{transactions[:balance]}\n"
     end
   end
-  
-end 
+end
