@@ -10,14 +10,47 @@ class Transactions
   end 
   
   def deposit(funds)
-    @balance += funds
+    balance_plus(funds)
+    record_deposit(funds)
   end
 
   def withdraw(funds)
      @balance >= funds
       @credit = format('%.2f', funds.to_s)
       @debit = ''
-      @balance -= funds
-      return format('%.2f', @balance)
+      balance_subtract(funds)
+      record_withdraw(funds)
+  end 
+  
+private
+
+  def record_deposit(funds)
+    transaction = {
+      time: Time.now.strftime('%d/%m/%y'),
+      credit: '%.2f' % funds,
+      debit: '------',
+      balance: '%.2f' % @balance
+    }
+
+    @transactions.push(transaction)
   end
+
+  def record_withdraw(funds)
+    transaction = {
+      time: Time.now.strftime('%d/%m/%y'),
+      credit: '------',
+      debit: '%.2f' % funds,
+      balance: '%.2f' % @balance
+    }
+    @transactions.push(transaction)
+  end
+
+  def balance_plus(funds)
+    @balance += funds
+  end
+
+  def balance_subtract(funds)
+    @balance -= funds
+  end
+  
 end 

@@ -11,18 +11,14 @@ class Statement
   end
 
   def format(transactions)
-    format
+    puts '  time    ||   credit  ||   debit  || balance'
+    transactions.join(' || ')
     transactions.reverse_each do |transactions|
-      print " #{transactions[:date]} ||",
+      print " #{transactions[:time]} ||",
             " #{transactions[:credit]}    ||",
             " #{transactions[:debit]}   ||",
             " #{transactions[:balance]}\n"
     end
   end
-
-  def display(transactions)
-    puts 'time        ||   credit     ||     debit  ||   balance'
-    transactions.join(' || ')
-  end 
-
+  
 end 

@@ -29,4 +29,25 @@ describe Transactions do
         expect(transactions.balance).to eq(480)
       end
     end 
+
+    describe '#transactions' do
+    context 'so transactions history is correct' do
+      it 'should be initialized with an empty array' do
+        expect(transactions.transactions).to eq []
+      end
+    end
+
+    context 'so the transaction history can be recorded' do
+      it 'deposit transaction information should be displayed' do
+        transactions.deposit(500)
+        expect(transactions.transactions.length).to eq 1
+      end
+
+      it 'withdraw transaction information should be displayed with other records' do
+        transactions.deposit(500)
+        transactions.withdraw(100)
+        expect(transactions.transactions.length).to eq 2
+      end
+    end
+  end
 end 
