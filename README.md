@@ -31,3 +31,40 @@ date || credit || debit || balance
 13/01/2023 || 2000.00 || || 3000.00
 10/01/2023 || 1000.00 || || 1000.00
 ```
+
+### Installation
+
+From the command line, clone this repository to your machine:
+
+```
+git clone https://github.com/florence-bain/bank_tech_test.git
+```
+
+once cloned, run this command for gems:
+
+```
+bundle install
+```
+
+### Using the program in IRB
+
+Require the file:
+
+```
+require './lib/account.rb'
+```
+
+Create a new bank account and enter transactions:
+
+```
+my_bank = Account.new(Transactions.new, Statement.new)
+my_bank.deposit(500)
+my_bank.withdraw(400)
+my_bank.deposit(300)
+my_bank.print_statement
+
+ Date     || Credit  || Debit    || Balance
+ 28/10/21 || 300.00  || ------   || 400.00
+ 28/10/21 || ------- || 400.00   || 100.00
+ 28/10/21 || 500.00  || ------   || 500.00
+```

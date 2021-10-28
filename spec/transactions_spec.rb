@@ -30,6 +30,12 @@ describe Transactions do
       end
     end 
 
+    context 'so the user can not go overdrawn' do
+      it 'should raise an error if the withdrawal is more than the balance' do
+        expect { transactions.withdraw(1000) }.to raise_error "Insufficient funds"
+      end
+    end
+
     describe '#transactions' do
     context 'so transactions history is correct' do
       it 'should be initialized with an empty array' do

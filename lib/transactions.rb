@@ -15,13 +15,12 @@ class Transactions
   end
 
   def withdraw(funds)
-     @balance >= funds
-      @credit = format('%.2f', funds.to_s)
-      @debit = ''
+    raise "Insufficient funds" if @balance < funds
+    
       balance_subtract(funds)
       record_withdraw(funds)
   end 
-  
+
 private
 
   def record_deposit(funds)
