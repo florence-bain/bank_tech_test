@@ -24,7 +24,7 @@ class Transactions
 
   def record_deposit(funds)
     transaction = {
-      time: Time.now.strftime('%d/%m/%y'),
+      date: Time.now.strftime('%d/%m/%y'),
       credit: '%.2f' % funds,
       debit: '------',
       balance: '%.2f' % @balance
@@ -35,7 +35,7 @@ class Transactions
 
   def record_withdraw(funds)
     transaction = {
-      time: Time.now.strftime('%d/%m/%y'),
+      date: Time.now.strftime('%d/%m/%y'),
       credit: '------',
       debit: '%.2f' % funds,
       balance: '%.2f' % @balance

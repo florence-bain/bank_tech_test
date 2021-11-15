@@ -109,11 +109,10 @@ I'd like to be able to view the date of transactions.
 
 From this I am able to identify the need for three objects (account, transactions, statement) and three methods (account.deposit, account.withdraw, account.statement).
 
+```
 Date || Credit || Debit || Balance
 28/10/21 || 300.00 || ------ || 400.00
 28/10/21 || ------- || 400.00 || 100.00
 28/10/21 || 500.00 || ------ || 500.00
-
-```
 
 ```

@@ -2,18 +2,18 @@ require_relative 'account'
 
 class Statement
   def initialize
-    @time = Time.now
+    @date = Time.now
   end
 
-  def time
-    @time = Time.now.strftime('%d/%m/%Y')
+  def date
+    @date = Time.now.strftime('%d/%m/%Y')
   end
 
   def format(transactions)
-    puts '  time    ||   credit  ||   debit  || balance'
+    puts '  date    ||   credit  ||   debit  || balance'
     transactions.join(' || ')
     transactions.reverse_each do |transactions|
-      print " #{transactions[:time]} ||",
+      print " #{transactions[:date]} ||",
             " #{transactions[:credit]}    ||",
             " #{transactions[:debit]}   ||",
             " #{transactions[:balance]}\n"
