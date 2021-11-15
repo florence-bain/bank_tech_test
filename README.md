@@ -63,6 +63,7 @@ my_bank.withdraw(400)
 my_bank.deposit(300)
 my_bank.print_statement
 ```
+<img width="569" alt="Screenshot 2021-10-28 at 13 18 01" src="https://user-images.githubusercontent.com/78934464/139254671-9cfa90bc-7852-4f69-be4b-be99c2b08006.png">
 
 ### Running the tests
 
